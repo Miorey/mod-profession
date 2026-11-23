@@ -44,7 +44,8 @@ WHERE r.`money` > 0;
 
 -- Remove the major glyph recipes
 DELETE FROM `character_spell`
-WHERE `spell` IN (57210, 57213, 57216, 57219, 57221, 57222, 57224, 57225, 57226, 57227, 59338, 59339, 59340, 64266, 64267);
+WHERE `spell` IN (57210, 57213, 57216, 57219, 57221, 57222, 57224, 57225, 57226, 57227,
+    59338, 59339, 59340, 64266, 64267);
 
 -- Remove the minor glyph recipes and Glyph of Death and Decay (no refund: learned by discovery)
 DELETE FROM `character_spell`
