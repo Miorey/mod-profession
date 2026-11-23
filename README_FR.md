@@ -1,52 +1,23 @@
-# SQUELETTE - Module modèle 
+# mod-profession
 
 [English](README.md) | [Français](README_FR.md)
 
-### Déscription
+Modifications de Murloc Village sur la Calligraphie pour les glyphes de chevalier de la mort. Données uniquement (SQL), pas de scripts C++.
 
-*Déscription du module*
+## Ce que fait le module
 
-### Mise en place du module:
+- **Monde :** les glyphes mineurs de chevalier de la mort et le Glyphe de Mort et décomposition ne peuvent plus être découverts. Les glyphes majeurs de chevalier de la mort ne sont enseignés que par les grands maîtres calligraphes du Norfendre.
+- **Personnages (exécuté une seule fois par base de personnages) :** les personnages qui ont appris les glyphes majeurs sont remboursés du prix du maître par courrier, et les recettes des glyphes majeurs et mineurs de chevalier de la mort sont retirées.
 
-###### Récupérer le projet
+## Installation
 
-Clonez le projet dans le dossier module sous le nom `${MODULE_NAME}`.
+Placez le module dans `modules/mod-profession` et relancez CMake. AzerothCore applique `data/sql/` au démarrage du worldserver.
 
-###### Modification de l'acquisition des points de talent
+`src/` ne contient qu'un chargeur vide : AzerothCore n'applique le SQL d'un module que si celui-ci en a un.
 
-À partir de maintenant nous considérons que vous vous trouvez à la racine de votre serveur.
-Appliquer le patch git en utilisant la commande suivante:\
-`git apply --ignore-space-change --ignore-whitespace modules/${MODULE_NAME}/.patch`
-
-Ou modifiez directement `src/` via votre éditeur favori\
-et appliquez les modifications trouvées dans `modules/${MODULE_NAME}/.patch`.
-
-###### Modifcation de la Base de Données
-
-Appliquez les requêtes dans les fichiers sql sous le dossier `modules/${MODULE_NAME}/sql/`\
-sur la table respectif (world => acore\_world / auth => acore\_auth / char => acore\_char)
-
-Voici une commande que j'utilise souvent pour appliquer directement plusieurs fichiers sql:\
-`for sql in $(find modules/${MODULE_NAME}/sql/*world*/ -type f -name '*.sql'); do mysql -uUSERDB -hHOSTDB -Dacore_world -p < ${sql}; done`
-
-###### Ajout des données DBC
-
-Copiez les sous dossier des DBC depuis `modules/${MODULE_NAME}/data/`\
-Et placez les dans votre dossier data (comme indiqué dans worldserver.conf).
-
-Ajoutez les égalements dans le dossier data du client.
-
-###### Recompilez et voilà.
-
-### Licence
-
-Licence MIT
-
-### Crédits
+## Crédits
 
 * [Jackhein](https://github.com/Jackhein) (auteur du module)
 * [Miorey](https://github.com/Miorey/)
 
-Notre serveur [MurlocVillage](https://wotlk.murlocvillage.com/fr/)\
-&emsp;&emsp;&ensp;&nbsp;Merci à [AzerothCore](http://azerothcore.org/)
-
+Notre serveur : [Murloc Village](https://wotlk.murlocvillage.com/fr/). Merci à [AzerothCore](https://www.azerothcore.org/).
