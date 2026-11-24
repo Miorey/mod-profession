@@ -2,11 +2,12 @@
 
 [English](README.md) | [Français](README_FR.md)
 
-Murloc Village changes to Inscription for the Death Knight glyphs. Data only (SQL), no C++ scripts.
+Murloc Village changes to professions: Inscription (Death Knight glyphs) and Engineering (Mechano-hog). Data only (SQL), no C++ scripts.
 
 ## What it does
 
 - **World:** the minor Death Knight glyphs and Glyph of Death and Decay can no longer be discovered. The major Death Knight glyphs are taught only by the Northrend Grand Master Inscription trainers.
+- **World:** the Mechano-hog and Mekgineer's Chopper are craftable at level 60 with vanilla reagents. Schematics: Engineering 300, Exalted with Gadgetzan, 150 g, sold by Jinky Twizzlefixxit (Mirage Raceway), who also sells the vendor parts.
 - **Characters (runs once per characters database):** characters who learned the major glyphs get the trainer price back by mail, and the major and minor Death Knight glyph recipes are removed.
 
 ## Install
