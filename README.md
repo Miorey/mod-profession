@@ -7,7 +7,7 @@ Murloc Village changes to professions: Inscription (Death Knight glyphs), Engine
 ## What it does
 
 - **World:** Death Knight glyphs are removed from the game. None of the 33 Death Knight glyph recipes is taught by a trainer or can be discovered.
-- **World:** the Mechano-hog and Mekgineer's Chopper are craftable at level 60 with vanilla reagents. Schematics: Engineering 300, Exalted with Gadgetzan, 150 g, sold by Jinky Twizzlefixxit (Mirage Raceway), who also sells the vendor parts.
+- **World:** the Mechano-hog and Mekgineer's Chopper are craftable at level 60 with vanilla reagents. Schematics: Engineering 300, 150 g, Exalted with Gadgetzan for the Horde Mechano-hog and with Booty Bay for the Alliance Mekgineer's Chopper, sold by Jinky Twizzlefixxit (Mirage Raceway), who also sells the vendor parts.
 - **World:** the Magic Rooster Egg mount is craftable by enchanters and can be traded. Formula: Enchanting 300, Exalted with the Cenarion Circle, 150 g, sold by Kania (Cenarion Hold). Reagents: 1 Chicken Egg and 50 of each vanilla dust (Strange, Soul, Vision, Dream, Illusion). Needs the matching client data from [mvDBC](https://github.com/Miorey/mvDBC) (craft spell 90000, formula 60006).
 - **Characters (runs once per characters database):**
   - Characters who learned major glyphs from a trainer get the trainer price back by mail.

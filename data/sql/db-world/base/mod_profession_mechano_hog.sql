@@ -79,10 +79,15 @@ INSERT INTO `spell_dbc` (
     0, 0, 1, 1, 1, 0, 0, 0, 14, 15, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0
 );
 
--- Schematics: Engineering 300, Exalted with Gadgetzan (369), 150 g (sell 37 g 50 s)
+-- Schematics: Engineering 300, Exalted (7), 150 g (sell 37 g 50 s), one per faction:
+-- Mechano-hog (44502): Horde races (690), Gadgetzan (369)
+-- Mekgineer's Chopper (44503): Alliance races (1101), Booty Bay (21)
 UPDATE `item_template` SET `RequiredSkillRank` = 300, `RequiredReputationFaction` = 369, `RequiredReputationRank` = 7,
-    `BuyPrice` = 1500000, `SellPrice` = 375000
-WHERE `entry` IN (44502, 44503);
+    `AllowableRace` = 690, `BuyPrice` = 1500000, `SellPrice` = 375000
+WHERE `entry` = 44502;
+UPDATE `item_template` SET `RequiredSkillRank` = 300, `RequiredReputationFaction` = 21, `RequiredReputationRank` = 7,
+    `AllowableRace` = 1101, `BuyPrice` = 1500000, `SellPrice` = 375000
+WHERE `entry` = 44503;
 
 -- Vendor parts: Engineering 300 instead of 450 (prices unchanged)
 UPDATE `item_template` SET `RequiredSkillRank` = 300 WHERE `entry` IN (44499, 44500);
